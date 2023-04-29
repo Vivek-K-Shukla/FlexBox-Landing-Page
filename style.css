@@ -55,6 +55,7 @@ ul{
     max-width:1180px;
     margin-inline:auto;
     padding:var(--padding-inline-section);
+    overflow:hidden;
 }
 
 .flex{
@@ -79,6 +80,8 @@ ul{
     color:white !important;
     padding:12px 24px;
     box-shadow:0 0 2px var(--secondary-text-color);
+    transition:0.2s ease-out;
+    text-align:center;
 }
 
 .primary-button:hover{
@@ -115,6 +118,7 @@ ul{
 .main-nav{
     margin-top:20px;
     justify-content: space-between;
+    position:relative;
 }
 
 .company-logo img{
@@ -128,6 +132,9 @@ ul{
 .nav-links ul{
     justify-content:end;
     gap:40px;
+}
+.nav-toggle{
+    display:none;
 }
 
 /* header */
@@ -150,7 +157,7 @@ header-section{
     margin-top:20px;
 }
 .header-right img{
-    width:600px;
+    width:100%;
 }
 
 /* companies-section */
@@ -160,8 +167,9 @@ header-section{
     color:var(--primary-text-color);
 }
 .logos{
-    justify-content:space-between;
+    justify-content:space-evenly;
     flex-wrap:wrap;
+    gap:20px;
 }
 .logo{
     height:46px;
@@ -176,6 +184,7 @@ header-section{
 }
 .features-header{
     text-align:center;
+    margin-bottom:40px;
 }
 .features-header h2{
     margin-bottom:20px;
@@ -185,7 +194,7 @@ header-section{
 .features-area{
     flex-wrap:wrap;
     justify-content:space-between;
-    gap:40px;
+    gap:20px;
     margin-top:20px;
 }
 .features-card{
@@ -205,6 +214,9 @@ header-section{
 .big-feature-container{
     gap:30px;
 }
+#second-big-feature{
+    flex-direction:row-reverse;
+}
 
 .feature-img img{
     width:100%;
@@ -215,14 +227,23 @@ header-section{
 }
 
 /* examples-section */
+.examples-section{
+    padding:80px var(--padding-inline-section);
+}
+.examples-header{
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+}
 .examples-area{
     justify-content:space-between;
     margin:30px 0px;
+    flex-wrap:wrap;
 }
 .examples-card{
     width:23%;
     position:relative;
-    min-height:300px;
+    height:300px;
     background: black;
     background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)),url('assets/asset\ 36.jpeg');
     background-size: cover;
@@ -252,6 +273,7 @@ header-section{
     flex-direction: column;
     gap:30px;
     color:white;
+    text-align:center;
 }
 .cta-section{
     background-color: #183b54;
@@ -292,4 +314,6 @@ header-section{
   .subfooter-container{
     justify-content: center;
     gap:20px;
+    flex-wrap: wrap;
   }
+
